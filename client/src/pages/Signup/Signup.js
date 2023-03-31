@@ -1,17 +1,17 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import react from "react";
-
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 const Signup = () => {
   return (
-    <Container className="justify-content-md-center">
-      <Row className="justify-content-md-center">
-        <Col>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Container className="h-100">
+      <Row className="justify-content-center align-items-center h-100">
+        <Col md={6} className="bg-light p-5 rounded">
+          <h1 className="text-center mb-4">Signup</h1>
+          <Form className="text-center">
+            <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
               <Form.Text className="text-muted">
@@ -19,15 +19,17 @@ const Signup = () => {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+
+            <Form.Group controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+
+            <Button variant="primary" size="lg" type="submit" block>
+              Login
             </Button>
           </Form>
         </Col>
@@ -35,4 +37,5 @@ const Signup = () => {
     </Container>
   );
 };
+
 export default Signup;
