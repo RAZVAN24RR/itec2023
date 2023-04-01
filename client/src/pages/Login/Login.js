@@ -3,13 +3,25 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 const Login = () => {
   return (
     <>
-      <Navbarex brand={"HAUFE"} login={"LOGIN"} profile={"Profile"} presenationPage={"Presentation Page"}/>
+      {/* Navbar */}
+    <Navbar className="navi ">
+      <Container className="text-primary">
+        <Navbar.Brand href="/">HAUFE</Navbar.Brand>
+        <Nav className="mr-auto justify-content-betwen">
+          <Nav.Link href="/">Back</Nav.Link>
+          <Nav.Link href="/signup">Sign up</Nav.Link>
+          </Nav>
+      </Container>
+    </Navbar>
+    {/* Navbar End */}
 
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <Row className="justify-content-center align-items-center h-100 container-fluid">

@@ -1,15 +1,24 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Footer from "../../components/Footer.js";
+import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar.js";
+
 
 function PresPage() {
   return (
     <>
-
-    <Navbarex brand={"HAUFE"} login={"LOGOUT"} profile={"Profile"} presenationPage={"Presentation Page"}/>
-
+    {/* Navbar */}
+    <Navbar className="navi ">
+      <Container className="text-primary">
+        <Navbar.Brand href="/">HAUFE</Navbar.Brand>
+        <Nav className="mr-auto justify-content-betwen">
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign up</Nav.Link>
+          </Nav>
+      </Container>
+    </Navbar>
+    {/* Navbar End */}
       <Container
         fluid
         className="text-center my-5 "

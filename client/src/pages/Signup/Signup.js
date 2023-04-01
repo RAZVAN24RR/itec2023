@@ -8,10 +8,13 @@ import Signups from "./test";
 import React, { useState } from "react";
 import { InputGroup } from "react-bootstrap";
 import RadioChecks from "./formcheck";
-import Footer from "../../components/Footer";
-import Navbarex from "../../components/navbar.js";
+import Footer from "../../components/Footer/Footer";
+
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 const Signup = () => {
+ 
   const [selectedOption, setSelectedOption] = useState("Select an option");
 
   function handleOptionSelect(eventKey, event) {
@@ -40,7 +43,17 @@ const Signup = () => {
   return (
     <>
 
-    <Navbarex brand={"HAUFE"} login={"LOGOUT"} profile={"Profile"} presenationPage={"Presentation Page"}/>
+      {/* Navbar */}
+   <Navbar className="navi ">
+   <Container className="text-primary">
+     <Navbar.Brand href="/">HAUFE</Navbar.Brand>
+     <Nav className="mr-auto justify-content-betwen">
+       <Nav.Link href="/">Back</Nav.Link>
+       <Nav.Link href="/login">Login</Nav.Link>
+       </Nav>
+   </Container>
+ </Navbar>
+ {/* Navbar End */}
       <Persdate />
       <Container className="d-flex justify-content-center align-items-center">
         <Row className="justify-content-center align-items-center h-100 container-fluid  mb-4">

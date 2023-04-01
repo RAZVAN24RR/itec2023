@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Navbarex from "./components/navbar";
 
 const tsParticlesConfig = {
