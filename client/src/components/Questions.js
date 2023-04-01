@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 
 function Questions() {
   return (
-    <Container fluid className="d-flex flex-column align-items-center justify-content-center vh-100" style={{maxHeight: '350px', minHeight: '200px'}}>
+    <Container fluid className="d-flex flex-column align-items-center justify-content-center vh-100" style={{maxHeight: '450px', minHeight: '300px', minWidth: '150px', maxWidth: '500px'}}>
       <Accordion className="w-100">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Accordion Item #1</Accordion.Header>
