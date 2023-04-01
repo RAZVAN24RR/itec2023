@@ -26,7 +26,7 @@ function Footer() {
                 <i className="bi bi-telephone"></i> 0256 244 134
               </p>
               <p>
-                <i className="bi bi-envelope"></i> info@haufe-lexware.com
+                <i className="bi bi-envelope"></i> join@haufe.com
               </p>
             </Col>
           </div>

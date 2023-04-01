@@ -39,8 +39,8 @@ const Signup = () => {
   return (
     <>
       <Persdate />
-      <Container className="d-flex justify-content-center align-items-center vh-100  ">
-        <Row className="justify-content-center align-items-center h-100 container-fluid  ">
+      <Container className="d-flex justify-content-center align-items-center">
+        <Row className="justify-content-center align-items-center h-100 container-fluid  mb-4">
           <Col
             md={6}
             className="bg-light p-5 rounded border border-primary p-3"
@@ -319,7 +319,6 @@ const Signup = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 };
