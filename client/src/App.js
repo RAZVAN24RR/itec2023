@@ -8,8 +8,8 @@ import PresPage from "./pages/PresentationPage/PresPage.js"
 function App() {
   return (
     <>
-    <Login/>
-    <Signup/>
+    {/* <Login/>
+    <Signup/> */}
     <PresPage />
     </>
   );

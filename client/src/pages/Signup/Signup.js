@@ -25,7 +25,7 @@ const Signup = () => {
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Confirm Password" />
             </Form.Group>
 
             <Form.Group controlId="formBasicCheckbox">
