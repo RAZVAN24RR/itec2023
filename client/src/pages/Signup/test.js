@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import { Dropdown } from "react-bootstrap";
+const Signups = () => {
+  const [selectedItem, setSelectedItem] = useState("Choose an option");
 
-function MyForm() {
-  const [showQuestions, setShowQuestions] = useState(false);
-
-  const handleCheckboxChange = (event) => {
-    setShowQuestions(event.target.checked);
+  const handleSelect = (eventKey, event) => {
+    setSelectedItem(event.target.innerHTML);
   };
 
   return (
-    <Form>
-      <Form.Check
-        type="checkbox"
-        label="Arată întrebările"
-        onChange={handleCheckboxChange}
-      />
+    <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Dropdown Button
+      </Dropdown.Toggle>
 
-      {showQuestions && (
-        <>
-          <Form.Label>Întrebarea 1:</Form.Label>
-          <Form.Control type="text" />
-
-          <Form.Label>Întrebarea 2:</Form.Label>
-          <Form.Control type="text" />
-        </>
-      )}
-    </Form>
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Action 1</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Action 2</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Action 3</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
   );
-}
-export default MyForm;
+};
+
+export default Signups;
