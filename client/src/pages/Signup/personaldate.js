@@ -3,13 +3,17 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import RadioChecks from "./formcheck";
 
 const Persdate = () => {
   return (
     <>
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <Row className="justify-content-center align-items-center h-100 container-fluid">
-          <Col md={6} className="bg-light p-5 rounded">
+          <Col
+            md={6}
+            className="bg-light p-5 rounded border border-primary p-3"
+          >
             <h1 className="text-center mb-4">Personal Dates</h1>
 
             <Form className="text-center">
@@ -34,9 +38,7 @@ const Persdate = () => {
                 <Form.Control type="password" placeholder="Confirm Password" />
               </Form.Group>
 
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
+              <Form.Group controlId="formBasicCheckbox"></Form.Group>
 
               <Button variant="primary" size="lg" type="submit" block>
                 Sign up{" "}

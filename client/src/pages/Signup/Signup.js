@@ -7,6 +7,7 @@ import Persdate from "./personaldate";
 import Signups from "./test";
 import React, { useState } from "react";
 import { InputGroup } from "react-bootstrap";
+import RadioChecks from "./formcheck";
 
 const Signup = () => {
   const [selectedOption, setSelectedOption] = useState("Select an option");
@@ -29,13 +30,20 @@ const Signup = () => {
   const handleDropdown2Select = (eventKey, event) => {
     setSelectedOptions2(event.target.innerHTML);
   };
+  const [selectedOptions3, setSelectedOptions3] = useState("Select an option");
+  const handleDropdown3Select = (eventKey, event) => {
+    setSelectedOptions3(event.target.innerHTML);
+  };
 
   return (
     <>
       <Persdate />
-      <Container className="d-flex justify-content-center align-items-center vh-100">
-        <Row className="justify-content-center align-items-center h-100 container-fluid">
-          <Col md={6} className="bg-light p-5 rounded">
+      <Container className="d-flex justify-content-center align-items-center vh-100  ">
+        <Row className="justify-content-center align-items-center h-100 container-fluid  ">
+          <Col
+            md={6}
+            className="bg-light p-5 rounded border border-primary p-3"
+          >
             <h1 className="text-center mb-4">Work Experience</h1>
 
             <Form className="text-left">
@@ -267,9 +275,9 @@ const Signup = () => {
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label>How do you handle in with conflicts? </Form.Label>
-                  <Dropdown onSelect={handleDropdown2Select}>
+                  <Dropdown onSelect={handleDropdown3Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                      {selectedOptions2}
+                      {selectedOptions3}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
@@ -289,12 +297,27 @@ const Signup = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Form.Group>
+                <p>
+                  On a scale of 1 to 5, how would you rate your comunication
+                  skills?
+                </p>
+                <Form.Group controlId="form-check" inline>
+                  <Form.Label>Listening:</Form.Label>
+                  <RadioChecks />
+                </Form.Group>
+                <Form.Group controlId="form-check" inline>
+                  <Form.Label>Written:</Form.Label>
+                  <RadioChecks />
+                </Form.Group>
+                <Form.Group controlId="form-check" inline>
+                  <Form.Label>Verbal:</Form.Label>
+                  <RadioChecks />
+                </Form.Group>
               </Form>
             </Form>
           </Col>
         </Row>
       </Container>
-      <Signups />
     </>
   );
 };
