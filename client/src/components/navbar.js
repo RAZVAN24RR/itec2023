@@ -10,6 +10,7 @@ function Navbarex() {
         <Nav className="mr-auto justify-content-betwen">
           <Nav.Link href="/login">LOGIN</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/presentation">PresentationPage</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

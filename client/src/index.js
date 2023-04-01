@@ -8,6 +8,7 @@ import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PresPage from "./pages/PresentationPage/PresPage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <ProfilePage />,
+  },
+  {
+    path: "/presentation",
+    element: <PresPage />,
   },
 ]);
 
