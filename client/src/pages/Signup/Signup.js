@@ -8,6 +8,7 @@ import Signups from "./test";
 import React, { useState } from "react";
 import { InputGroup } from "react-bootstrap";
 import RadioChecks from "./formcheck";
+import Footer from "../../components/Footer";
 
 const Signup = () => {
   const [selectedOption, setSelectedOption] = useState("Select an option");
@@ -318,6 +319,7 @@ const Signup = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };
