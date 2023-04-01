@@ -6,8 +6,8 @@ import Col from "react-bootstrap/Col";
 
 const Login = () => {
   return (
-    <Container className="h-100">
-      <Row className="justify-content-center align-items-center h-100">
+    <Container className="d-flex justify-content-center align-items-center vh-100">
+      <Row className="justify-content-center align-items-center h-100 container-fluid">
         <Col md={6} className="bg-light p-5 rounded">
           <h1 className="text-center mb-4">Login</h1>
           <Form className="text-center">
