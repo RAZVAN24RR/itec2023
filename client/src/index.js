@@ -13,7 +13,7 @@ import PresPage from "./pages/PresentationPage/PresPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Signup />,
+    element: <PresPage />,
   },
   {
     path: "/login",
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <ProfilePage />,
   },
   {
-    path: "/presentation",
-    element: <PresPage />,
+    path: "/signup",
+    element: <Signup />,
   },
 ]);
 
