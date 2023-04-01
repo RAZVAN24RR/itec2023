@@ -1,11 +1,10 @@
 import React, { useEffect, useCallback } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Login from "./pages/Login/Login.js";
-import Signup from "./pages/Signup/Signup.js";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Footer from "./components/Footer";
+import Navbarex from "./components/navbar";
 
 const tsParticlesConfig = {
   fps_limit: 60,
@@ -84,7 +83,7 @@ const tsParticlesConfig = {
   retina_detect: true,
 };
 
-function App() {
+function App(props) {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
 
@@ -101,7 +100,8 @@ function App() {
   return (
     <div>
       <div className="content">
-        <Signup />
+        <Navbarex />
+        {props.children}
         <Footer />
       </div>
 

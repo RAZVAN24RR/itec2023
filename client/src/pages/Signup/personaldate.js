@@ -12,11 +12,11 @@ const Persdate = () => {
         <Row className="justify-content-center align-items-center h-100 container-fluid">
           <Col
             md={6}
-            className="bg-light p-5 rounded border border-primary p-3"
+            className="bg-light p-5 rounded border border-primary p-3 gap-4"
           >
             <h1 className="text-center mb-4">Personal Dates</h1>
 
-            <Form className="text-center">
+            <Form className="text-center d-flex gap-4 flex-column">
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Name </Form.Label>
                 <Form.Control type="password" placeholder="Name" />
