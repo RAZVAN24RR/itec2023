@@ -10,20 +10,19 @@ function Footer() {
               <Col md={6}>
                   <h5>About Us</h5>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut
-                    velit id tellus ullamcorper iaculis sit amet ac ligula.
+                  Our company was founded on the principles of excellence, integrity, and innovation. We believe that these values are the key to our success and the reason why our customers continue to choose us time and time again.
                   </p>
               </Col>
               <Col md={{ span: 10, offset: 3 }}>
                   <h5>Contact Us</h5>
                   <p>
-                    <i className='bi bi-geo-alt'></i> 123 Main St, New York, NY 10001
+                    <i className='bi bi-geo-alt'></i> Piața Consiliul Europei 2, Timișoara 300627
                   </p>
                   <p>
-                    <i className='bi bi-telephone'></i> (555) 555-5555
+                    <i className='bi bi-telephone'></i> 0256 244 134
                   </p>
                   <p>
-                    <i className='bi bi-envelope'></i> info@example.com
+                    <i className='bi bi-envelope'></i> info@haufe-lexware.com
                   </p>
               </Col>
           </div>
