@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import { InputGroup } from "react-bootstrap";
 import RadioChecks from "./formcheck";
 import Footer from "../../components/Footer";
+import Navbarex from "../../components/navbar.js";
 
 const Signup = () => {
   const [selectedOption, setSelectedOption] = useState("Select an option");
@@ -38,6 +39,8 @@ const Signup = () => {
 
   return (
     <>
+
+    <Navbarex brand={"HAUFE"} login={"LOGOUT"} profile={"Profile"} presenationPage={"Presentation Page"}/>
       <Persdate />
       <Container className="d-flex justify-content-center align-items-center">
         <Row className="justify-content-center align-items-center h-100 container-fluid  mb-4">
@@ -49,7 +52,7 @@ const Signup = () => {
 
             <Form className="text-left">
               <Form.Group controlId="formBasicPassword">
-                <Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>
                   How many years of work Experience do you have?{" "}
                 </Form.Label>
                 <Dropdown onSelect={handleOptionSelect}>
@@ -77,7 +80,7 @@ const Signup = () => {
                 </Dropdown>
               </Form.Group>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label>In what industry have you work?</Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>In what industry have you work?</Form.Label>
                 <Dropdown onSelect={handleDropdownSelect}>
                   <Dropdown.Toggle variant="primary" id="dropdown-basic">
                     {selectedOptions}
@@ -116,14 +119,14 @@ const Signup = () => {
                 {selectedOption1 === "Frontend" && (
                   <>
                     <Form.Group controlId="formBasicFrontend">
-                      <Form.Label>
+                      <Form.Label style={{fontWeight: "bold"}}>
                         Whitch Frontend framework are you comfortable with?
                       </Form.Label>
                       <Form.Check label="React" value="Frontend" />
                       <Form.Check label="Angular" value="Frontend" />
                       <Form.Check label="Vue" value="Frontend" />
                     </Form.Group>
-                    <Form.Label>
+                    <Form.Label style={{fontWeight: "bold"}}>
                       On a scale from 1 to 5,how familiar are you in the
                       following programing language?
                     </Form.Label>
@@ -172,7 +175,7 @@ const Signup = () => {
                       </InputGroup>
                     </Form.Group>
                     <Form.Group controlId="formBasicFrontend">
-                      <Form.Label>
+                      <Form.Label style={{fontWeight: "bold"}}>
                         Whitch Frontend tools are you comfortable with?
                       </Form.Label>
                       <Form.Check label="Webpack" value="Frontend" />
@@ -186,7 +189,7 @@ const Signup = () => {
                 {selectedOption1 === "Backend" && (
                   <>
                     <Form.Group controlId="formBasicFrontend">
-                      <Form.Label>
+                      <Form.Label style={{fontWeight: "bold"}}>
                         Whitch Backend framework are you comfortable with?
                       </Form.Label>
                       <Form.Check label="Node.js" value="Frontend" />
@@ -196,7 +199,7 @@ const Signup = () => {
                       <Form.Check label="ASP.NET" value="Frontend" />
                     </Form.Group>
                     <Form.Group controlId="formBasicFrontend">
-                      <Form.Label>
+                      <Form.Label style={{fontWeight: "bold"}}>
                         Whitch programing language are you familiar with?
                       </Form.Label>
                       <Form.Check label="Java" value="Frontend" />
@@ -206,7 +209,7 @@ const Signup = () => {
                       <Form.Check label="C#" value="Frontend" />
                     </Form.Group>
                     <Form.Group controlId="formBasicFrontend">
-                      <Form.Label>
+                      <Form.Label style={{fontWeight: "bold"}}>
                         On a scale from 1 to 5,how familiar are you in the
                         following Backend Tools?
                       </Form.Label>
@@ -254,7 +257,7 @@ const Signup = () => {
                   </>
                 )}
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>What is your comunication style? </Form.Label>
+                  <Form.Label style={{fontWeight: "bold"}}>What is your comunication style? </Form.Label>
                   <Dropdown onSelect={handleDropdown2Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
                       {selectedOptions2}
@@ -275,7 +278,7 @@ const Signup = () => {
                   </Dropdown>
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>How do you handle in with conflicts? </Form.Label>
+                  <Form.Label style={{fontWeight: "bold"}}>How do you handle in with conflicts? </Form.Label>
                   <Dropdown onSelect={handleDropdown3Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
                       {selectedOptions3}
@@ -298,20 +301,20 @@ const Signup = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Form.Group>
-                <p>
+                <p style={{fontWeight: "bold"}}>
                   On a scale of 1 to 5, how would you rate your comunication
                   skills?
                 </p>
                 <Form.Group controlId="form-check" inline>
-                  <Form.Label>Listening:</Form.Label>
+                  <Form.Label style={{fontWeight: "bold"}}>Listening:</Form.Label>
                   <RadioChecks />
                 </Form.Group>
                 <Form.Group controlId="form-check" inline>
-                  <Form.Label>Written:</Form.Label>
+                  <Form.Label style={{fontWeight: "bold"}}>Written:</Form.Label>
                   <RadioChecks />
                 </Form.Group>
                 <Form.Group controlId="form-check" inline>
-                  <Form.Label>Verbal:</Form.Label>
+                  <Form.Label style={{fontWeight: "bold"}}>Verbal:</Form.Label>
                   <RadioChecks />
                 </Form.Group>
               </Form>

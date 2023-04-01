@@ -100,7 +100,6 @@ function App(props) {
   return (
     <div>
       <div className="content">
-        <Navbarex />
         {props.children}
         <Footer />
       </div>

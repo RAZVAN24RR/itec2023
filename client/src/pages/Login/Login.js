@@ -4,10 +4,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Footer from "../../components/Footer";
+import Navbarex from "../../components/navbar";
 
 const Login = () => {
   return (
     <>
+      <Navbarex brand={"HAUFE"} login={"LOGIN"} profile={"Profile"} presenationPage={"Presentation Page"}/>
+
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <Row className="justify-content-center align-items-center h-100 container-fluid">
           <Col

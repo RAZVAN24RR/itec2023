@@ -2,10 +2,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Footer from "../../components/Footer.js";
+import Navbarex from "../../components/navbar.js";
 
 function PresPage() {
   return (
     <>
+
+    <Navbarex brand={"HAUFE"} login={"LOGOUT"} profile={"Profile"} presenationPage={"Presentation Page"}/>
+
       <Container
         fluid
         className="text-center my-5 "

@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Button, Nav } from "react-bootstrap";
 import AboutMe from "../../components/AboutMe.js";
+import Navbarex from "../../components/navbar.js";
 
 const ProfilePage = () => {
   const [applicationStatus, setApplicationStatus] = useState({
@@ -100,6 +101,10 @@ const ProfilePage = () => {
       })*/
 
   return (
+    <>
+
+    <Navbarex brand={"HAUFE"} login={"LOGOUT"} profile={"Profile"} presenationPage={"Presentation Page"}/>
+
     <Container className="bg-white">
       <Row>
         <Col md={{ span: 8, offset: 2 }}>
@@ -163,6 +168,9 @@ const ProfilePage = () => {
         </Col>
       </Row>
     </Container>
+    </>
+
+    
   );
 };
 

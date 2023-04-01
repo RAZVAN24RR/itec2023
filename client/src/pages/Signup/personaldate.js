@@ -16,13 +16,13 @@ const Persdate = () => {
           >
             <h1 className="text-center mb-4">Personal Dates</h1>
 
-            <Form className="text-center d-flex gap-4 flex-column">
+            <Form className="text-left d-flex gap-4 flex-column">
               <Form.Group controlId="formBasicPassword">
-                <Form.Label>Name </Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>Name</Form.Label>
                 <Form.Control type="password" placeholder="Name" />
               </Form.Group>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
@@ -30,11 +30,11 @@ const Persdate = () => {
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group controlId="formBasicPassword">
-                <Form.Label>Confirm Password</Form.Label>
+                <Form.Label style={{fontWeight: "bold"}}>Confirm Password</Form.Label>
                 <Form.Control type="password" placeholder="Confirm Password" />
               </Form.Group>
 
