@@ -10,6 +10,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PresPage from "./pages/PresentationPage/PresPage";
 import Home from "./pages/homepage/Home";
+
 const router = createBrowserRouter([
   {
     path: "/",
