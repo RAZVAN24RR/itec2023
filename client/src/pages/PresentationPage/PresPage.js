@@ -61,10 +61,20 @@ function PresPage() {
           create a more peaceful and prosperous world for all.
         </p>
         <Form inline className="d-flex justify-content-center text-center">
-          <Button variant="secondary" size="lg" className="mr-5 signin">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="mr-5 signin"
+            href="/signup"
+          >
             Sign in
           </Button>
-          <Button variant="primary" size="lg" className="ml-2 login">
+          <Button
+            variant="primary"
+            size="lg"
+            className="ml-2 login"
+            href="/login"
+          >
             Log in
           </Button>
         </Form>
