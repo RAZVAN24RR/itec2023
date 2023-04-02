@@ -63,6 +63,7 @@ const Login = () => {
                 size="lg"
                 type="submit"
                 block
+                href="/Home"
               >
                 Login{" "}
               </Button>

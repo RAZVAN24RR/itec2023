@@ -13,7 +13,7 @@ import logo from "../../assets/logo.jpg";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
+import Button from "react-bootstrap/Button";
 const Signup = () => {
   const [selectedOption, setSelectedOption] = useState("Select an option");
 
@@ -370,6 +370,17 @@ const Signup = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </Form.Group>
+                <div className="ext-left d-flex gap-4 flex-column mt-3">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    type="submit"
+                    block
+                    href="/Home"
+                  >
+                    Sign up
+                  </Button>
+                </div>
               </Form>
             </Form>
           </Col>

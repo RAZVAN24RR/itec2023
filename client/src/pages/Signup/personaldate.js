@@ -18,11 +18,13 @@ const Persdate = () => {
 
             <Form className="text-left d-flex gap-4 flex-column">
               <Form.Group controlId="formBasicPassword">
-                <Form.Label style={{fontWeight: "bold"}}>Name</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>Name</Form.Label>
                 <Form.Control type="password" placeholder="Name" />
               </Form.Group>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label style={{fontWeight: "bold"}}>Email address</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                  Email address
+                </Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
@@ -30,19 +32,17 @@ const Persdate = () => {
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
-                <Form.Label style={{fontWeight: "bold"}}>Password</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group controlId="formBasicPassword">
-                <Form.Label style={{fontWeight: "bold"}}>Confirm Password</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                  Confirm Password
+                </Form.Label>
                 <Form.Control type="password" placeholder="Confirm Password" />
               </Form.Group>
 
               <Form.Group controlId="formBasicCheckbox"></Form.Group>
-
-              <Button variant="primary" size="lg" type="submit" block>
-                Sign up{" "}
-              </Button>
             </Form>
           </Col>
         </Row>
