@@ -5,6 +5,10 @@ import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar.js";
 import "./prespage.css";
 import logo from "../../assets/logo.jpg";
+import React from "react";
+
+import { Button, ButtonGroup, Row } from "react-bootstrap";
+import { Form } from "react-router-dom";
 
 function PresPage() {
   return (
@@ -28,7 +32,7 @@ function PresPage() {
       {/* Navbar End */}
       <Container
         fluid
-        className="text-center my-5 "
+        className="text-center my-5 d-flex justify-content-center "
         style={{
           display: "flex",
           flexDirection: "column",
@@ -46,18 +50,24 @@ function PresPage() {
             style={{ fontSize: "55px", textColor: "white" }}
           >
             We are all connected
+            <br />
+            <br />
           </h1>
         </div>
-        <p className="lead text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod
-          mauris mauris, eu feugiat ipsum posuere quis.
-        </p>
-        <p className="lead">
+        <p className="lead padmis">
           Our mission is to connect people around the world and make the world a
           better place. We believe that by promoting empathy, understanding, and
           collaboration, we can overcome the challenges that divide us and
           create a more peaceful and prosperous world for all.
         </p>
+        <Form inline className="d-flex justify-content-center text-center">
+          <Button variant="secondary" size="lg" className="mr-5 signin">
+            Sign in
+          </Button>
+          <Button variant="primary" size="lg" className="ml-2 login">
+            Log in
+          </Button>
+        </Form>
       </Container>
     </>
   );
