@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const tourSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'A tour must have a name'],
+    required: [true, 'An user must have a name'],
     unique: true,
     trim: true
   },
   email: {
     type: String,
-    required: [true, 'A tour must have a name'],
+    required: [true, 'An user must have a name'],
     unique: true,
     trim: true
   },

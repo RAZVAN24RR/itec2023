@@ -15,33 +15,33 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 const Signup = () => {
-  const [selectedOption, setSelectedOption] = useState("Select an option");
+  const [yearsOfExperience, setYearsOfExperience] = useState("Select an optio");
 
   function handleOptionSelect(eventKey, event) {
-    setSelectedOption(event.target.innerText);
+    setYearsOfExperience(event.target.innerText);
   }
-  const [selectedOptions, setSelectedOptions] = useState("Select an option");
+  const [industry, setIndustry] = useState("Select an option");
 
   const handleDropdownSelect = (eventKey, event) => {
-    setSelectedOptions(event.target.innerHTML);
+    setIndustry(event.target.innerHTML);
   };
-  const [selectedOption1, setSelectedOption1] = useState("");
+  const [specialization, setSpecialization] = useState("");
 
   const handleradioSelect = (event) => {
-    setSelectedOption1(event.target.value);
+    setSpecialization(event.target.value);
   };
 
-  const [selectedOptions2, setSelectedOptions2] = useState("Select an option");
+  const [comunicationStyle, setComunicationStyle] = useState("Select aoption");
   const handleDropdown2Select = (eventKey, event) => {
-    setSelectedOptions2(event.target.innerHTML);
+    setComunicationStyle(event.target.innerHTML);
   };
-  const [selectedOptions3, setSelectedOptions3] = useState("Select an option");
+  const [conflicts, setConflicts] = useState("Select an option");
   const handleDropdown3Select = (eventKey, event) => {
-    setSelectedOptions3(event.target.innerHTML);
+    setConflicts(event.target.innerHTML);
   };
-  const [selectedOptions4, setSelectedOptions4] = useState("Select an option");
+  const [rank, setRank] = useState("Select an option");
   const handleDropdown4Select = (eventKey, event) => {
-    setSelectedOptions4(event.target.innerHTML);
+    setRank(event.target.innerHTML);
   };
   return (
     <>
@@ -78,7 +78,7 @@ const Signup = () => {
                 </Form.Label>
                 <Dropdown onSelect={handleOptionSelect}>
                   <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                    {selectedOption}
+                    {yearsOfExperience}
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -106,7 +106,7 @@ const Signup = () => {
                 </Form.Label>
                 <Dropdown onSelect={handleDropdownSelect}>
                   <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                    {selectedOptions}
+                    {industry}
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -139,7 +139,7 @@ const Signup = () => {
                   />
                 </Form.Group>
 
-                {selectedOption1 === "Frontend" && (
+                {specialization === "Frontend" && (
                   <>
                     <Form.Group controlId="formBasicFrontend">
                       <Form.Label style={{ fontWeight: "bold" }}>
@@ -209,7 +209,7 @@ const Signup = () => {
                   </>
                 )}
 
-                {selectedOption1 === "Backend" && (
+                {specialization === "Backend" && (
                   <>
                     <Form.Group controlId="formBasicFrontend">
                       <Form.Label style={{ fontWeight: "bold" }}>
@@ -285,7 +285,7 @@ const Signup = () => {
                   </Form.Label>
                   <Dropdown onSelect={handleDropdown2Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                      {selectedOptions2}
+                      {comunicationStyle}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
@@ -308,7 +308,7 @@ const Signup = () => {
                   </Form.Label>
                   <Dropdown onSelect={handleDropdown3Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                      {selectedOptions3}
+                      {conflicts}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
@@ -356,7 +356,7 @@ const Signup = () => {
                   </Form.Label>
                   <Dropdown onSelect={handleDropdown4Select}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                      {selectedOptions4}
+                      {rank}
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>

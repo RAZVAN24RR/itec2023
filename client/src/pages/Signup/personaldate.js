@@ -35,12 +35,6 @@ const Persdate = () => {
                 <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label style={{ fontWeight: "bold" }}>
-                  Confirm Password
-                </Form.Label>
-                <Form.Control type="password" placeholder="Confirm Password" />
-              </Form.Group>
 
               <Form.Group controlId="formBasicCheckbox"></Form.Group>
             </Form>

@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/logo.jpg";
 import axios from "axios";
@@ -19,7 +19,7 @@ const Login = () => {
   const [token, setToken] = useState("");
   //LOGIN STATES END
   //EVENT HANDDLERS
-
+  const navigate = useNavigate();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -43,10 +43,7 @@ const Login = () => {
       localStorage.setItem("key", response.data.token);
       console.log(response.data);
       // if (response.status == 200)
-      let history = useHistory();
-      const handleClick = () => {
-        if (token) history.push("/home");
-      };
+      if (token) navigate("/home");
     } catch (error) {
       console.log(error);
     }
