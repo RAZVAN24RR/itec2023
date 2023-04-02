@@ -20,8 +20,12 @@ const Login = () => {
             <img src={logo}></img>
           </Navbar.Brand>
           <Nav className="mr-auto justify-content-betwen">
-            <Nav.Link href="/">Back</Nav.Link>
-            <Nav.Link href="/signup">Sign up</Nav.Link>
+            <Nav.Link href="/" className="text-black">
+              Back
+            </Nav.Link>
+            <Nav.Link href="/signup" className="text-black">
+              Sign up
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -66,7 +70,6 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 };

@@ -15,9 +15,13 @@ function PresPage() {
           <Navbar.Brand href="/">
             <img src={logo}></img>
           </Navbar.Brand>
-          <Nav className="mr-auto justify-content-betwen">
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/signup">Sign up</Nav.Link>
+          <Nav className="mr-auto justify-content-betwen text-black ">
+            <Nav.Link href="/login" className="text-black">
+              Login
+            </Nav.Link>
+            <Nav.Link href="/signup" className="text-black">
+              Sign up
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

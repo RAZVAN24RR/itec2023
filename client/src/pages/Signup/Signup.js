@@ -52,8 +52,12 @@ const Signup = () => {
             <img src={logo}></img>
           </Navbar.Brand>
           <Nav className="mr-auto justify-content-betwen">
-            <Nav.Link href="/">Back</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/" className="text-black">
+              Back
+            </Nav.Link>
+            <Nav.Link href="/login" className="text-black">
+              Login
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
