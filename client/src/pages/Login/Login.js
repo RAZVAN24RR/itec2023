@@ -13,7 +13,6 @@ import "./Login.css";
 import logo from "../../assets/logo.jpg";
 import axios from "axios";
 
-
 const Login = () => {
   //LOGIN STATES
   const [email, setEmail] = useState("");
@@ -66,6 +65,9 @@ const Login = () => {
             <Nav.Link href="/signup" className="text-black">
               Sign up
             </Nav.Link>
+            <Nav.Link href="/profile" className="text-black">
+              Profile
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -107,18 +109,17 @@ const Login = () => {
 
               <Form.Group controlId="formBasicCheckbox"></Form.Group>
 
-          <Button
-              className="mt-5"
-              variant="primary"
-              size="lg"
-              type="submit"
-              block
-            >
-              <a href="/profile" style={{ color: "white", textDecoration: "none" }}>
-                Login
-              </a>
-          </Button>
-
+              <Button
+                className="mt-5"
+                variant="primary"
+                size="lg"
+                type="submit"
+                block
+                href="/profile"
+                onClick={(e) => handleFormSubmit(e)}
+              >
+                Login{" "}
+              </Button>
             </Form>
           </Col>
         </Row>
