@@ -36,22 +36,22 @@ app.post('/api/register', async (req, res) => {
 //Api register end
 app.post('/api/login', async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
 
     if (!user) {
       return res.status(401).json({ error: 'Invalid username or password.' });
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isPasswordValid = password === user.password;
 
     if (!isPasswordValid) {
       return res.status(401).json({ error: 'Invalid username or password.' });
     }
 
     const token = jwt.sign({ userId: user._id }, 'secret');
-
+    // localStorage.setItem('key', token);
     res.status(200).json({ token });
   } catch (error) {
     console.error(error);
