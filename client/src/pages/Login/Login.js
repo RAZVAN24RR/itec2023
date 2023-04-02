@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/logo.jpg";
 import axios from "axios";
+
+
 const Login = () => {
   //LOGIN STATES
   const [email, setEmail] = useState("");
@@ -105,16 +107,18 @@ const Login = () => {
 
               <Form.Group controlId="formBasicCheckbox"></Form.Group>
 
-              <Button
-                className="mt-5"
-                variant="primary"
-                size="lg"
-                type="submit"
-                block
-                onClick={(e) => handleFormSubmit(e)}
-              >
-                Login{" "}
-              </Button>
+          <Button
+              className="mt-5"
+              variant="primary"
+              size="lg"
+              type="submit"
+              block
+            >
+              <a href="/profile" style={{ color: "white", textDecoration: "none" }}>
+                Login
+              </a>
+          </Button>
+
             </Form>
           </Col>
         </Row>

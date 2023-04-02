@@ -7,6 +7,8 @@ import Footer from "../../components/Footer/Footer";
 import "./home.css";
 import logo from "../../assets/logo.jpg";
 import { Nav, Navbar } from "react-bootstrap";
+import Questions from "../../components/Questions.js";
+
 const Home = () => {
   return (
     <>
@@ -28,7 +30,7 @@ const Home = () => {
       </Navbar>
       {/* Navbar End */}
 
-      <p className="test">ana are mere</p>
+      <Questions />
     </>
   );
 };
