@@ -83,7 +83,9 @@ function Questions() {
               7. Care este numarul maxim de New Employee pe care pot sa ii iau?
             </h5>
           </Accordion.Header>
-          <Accordion.Body>Ana are mere</Accordion.Body>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur a
+          </Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </Container>

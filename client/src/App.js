@@ -103,8 +103,6 @@ function App(props) {
         {props.children}
         <Footer />
       </div>
-
-      {/* <MyForm /> */}
       <Particles
         id="tsparticles"
         init={particlesInit}

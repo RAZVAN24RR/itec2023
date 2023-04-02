@@ -18,6 +18,10 @@ const tourSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  rank: {
+    type: String,
+    required: true
+  },
   age: {
     type: Number,
     default: 0

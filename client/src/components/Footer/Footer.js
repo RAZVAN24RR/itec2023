@@ -45,9 +45,7 @@ function Footer() {
         </Row>
         <Row>
           <Col lg={12}>
-            <p>
-              &copy; {new Date().getFullYear()} MyCompany. All rights reserved.
-            </p>
+            <p>&copy; {new Date().getFullYear()} Memo. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

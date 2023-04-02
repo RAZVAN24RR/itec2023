@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Button from "react-bootstrap/Button";
+import Context from "../contexts/Context";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Footer from "../../components/Footer/Footer";
-import Navbarex from "../../components/navbar";
+// import Footer from "../../components/Footer/Footer";
+// import Navbarex from "../../components/navbar";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +19,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  const tokenJSW = useContext(Context);
   //LOGIN STATES END
   //EVENT HANDDLERS
   const navigate = useNavigate();
@@ -40,11 +42,12 @@ const Login = () => {
         email,
         password,
       });
-      setToken(response.data.token);
+      // if (token) setToken(response.data.token);
       localStorage.setItem("key", response.data.token);
-      console.log(response.data);
+      // console.log(response.data);
       // if (response.status == 200)
-      if (token) navigate("/home");
+      setToken(token);
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
@@ -64,9 +67,6 @@ const Login = () => {
             </Nav.Link>
             <Nav.Link href="/signup" className="text-black">
               Sign up
-            </Nav.Link>
-            <Nav.Link href="/profile" className="text-black">
-              Profile
             </Nav.Link>
           </Nav>
         </Container>

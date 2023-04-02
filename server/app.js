@@ -15,7 +15,7 @@ app.use(cors());
 //Api register
 app.post('/api/register', async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, rank } = req.body;
 
     // const salt = await bcrypt.genSalt(10);
     // const hashedPassword = await bcrypt.hash(password, salt);
@@ -23,7 +23,8 @@ app.post('/api/register', async (req, res) => {
     const user = new User({
       name,
       email,
-      password
+      password,
+      rank
     });
 
     await user.save();
