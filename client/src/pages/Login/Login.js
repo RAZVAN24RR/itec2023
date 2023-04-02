@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
@@ -7,10 +8,47 @@ import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/logo.jpg";
-
+import axios from "axios";
 const Login = () => {
+  //LOGIN STATES
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
+  //LOGIN STATES END
+  //EVENT HANDDLERS
+  const navigate = useNavigate();
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // localStorage.setItem("key", email);
+      // localStorage.getItem("key");
+
+      const response = await axios.post("http://localhost:8000/api/login", {
+        email,
+        password,
+      });
+      setToken(response.data.token);
+      localStorage.setItem("key", response.data.token);
+      console.log(response.data);
+      // if (response.status == 200)
+      if (token) navigate("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  //EVENT HANDDLERS END
   return (
     <>
       {/* Navbar */}
@@ -39,12 +77,17 @@ const Login = () => {
           >
             <h1 className="text-left mb-4">Login</h1>
 
-            <Form className="text-left">
+            <Form className="text-left" onSubmit={handleFormSubmit}>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label style={{ fontWeight: "bold" }}>
                   Email address
                 </Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
@@ -52,7 +95,12 @@ const Login = () => {
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicCheckbox"></Form.Group>
@@ -63,7 +111,7 @@ const Login = () => {
                 size="lg"
                 type="submit"
                 block
-                href="/Home"
+                onClick={(e) => handleFormSubmit(e)}
               >
                 Login{" "}
               </Button>
