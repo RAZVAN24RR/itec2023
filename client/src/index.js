@@ -11,6 +11,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PresPage from "./pages/PresentationPage/PresPage";
 import Home from "./pages/homepage/Home";
 import Userprofile from "./pages/Userprofile/userprofile";
+import Dashboard from "./pages/Dashboard/Dashboard.js";
+import NewEmployeesPage from "./pages/NewEmployeesPage/NewEmployeesPage.js";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: "/userprofile",
     element: <Userprofile />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/newemployeespage",
+    element: <NewEmployeesPage />,
   },
 ]);
 
