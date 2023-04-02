@@ -7,21 +7,25 @@ import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import "./Login.css";
+import logo from "../../assets/logo.jpg";
 
 const Login = () => {
   return (
     <>
       {/* Navbar */}
-    <Navbar className="navi">
-      <Container className="text-primary">
-        <Navbar.Brand href="/">HAUFE</Navbar.Brand>
-        <Nav className="mr-auto justify-content-betwen">
-          <Nav.Link href="/">Back</Nav.Link>
-          <Nav.Link href="/signup">Sign up</Nav.Link>
+      <Navbar className="navi">
+        <Container className="text-primary">
+          <Navbar.Brand href="/">
+            <img src={logo}></img>
+          </Navbar.Brand>
+          <Nav className="mr-auto justify-content-betwen">
+            <Nav.Link href="/">Back</Nav.Link>
+            <Nav.Link href="/signup">Sign up</Nav.Link>
           </Nav>
-      </Container>
-    </Navbar>
-    {/* Navbar End */}
+        </Container>
+      </Navbar>
+      {/* Navbar End */}
 
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <Row className="justify-content-center align-items-center h-100 container-fluid">
@@ -33,7 +37,9 @@ const Login = () => {
 
             <Form className="text-left">
               <Form.Group controlId="formBasicEmail">
-                <Form.Label style={{fontWeight: "bold"}}>Email address</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>
+                  Email address
+                </Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
@@ -41,7 +47,7 @@ const Login = () => {
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
-                <Form.Label style={{fontWeight: "bold"}}>Password</Form.Label>
+                <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
 

@@ -10,7 +10,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PresPage from "./pages/PresentationPage/PresPage";
 import Home from "./pages/homepage/Home";
-
+import Userprofile from "./pages/Userprofile/userprofile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,9 +29,13 @@ const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-  path: "/home",
-  element: <Home />,
-},
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/userprofile",
+    element: <Userprofile />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

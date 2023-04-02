@@ -3,22 +3,25 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Navbarex from "../../components/navbar.js";
-
+import "./prespage.css";
+import logo from "../../assets/logo.jpg";
 
 function PresPage() {
   return (
     <>
-    {/* Navbar */}
-    <Navbar className="navi ">
-      <Container className="text-primary">
-        <Navbar.Brand href="/">HAUFE</Navbar.Brand>
-        <Nav className="mr-auto justify-content-betwen">
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/signup">Sign up</Nav.Link>
+      {/* Navbar */}
+      <Navbar className="navi ">
+        <Container className="text-primary">
+          <Navbar.Brand href="/">
+            <img src={logo}></img>
+          </Navbar.Brand>
+          <Nav className="mr-auto justify-content-betwen">
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/signup">Sign up</Nav.Link>
           </Nav>
-      </Container>
-    </Navbar>
-    {/* Navbar End */}
+        </Container>
+      </Navbar>
+      {/* Navbar End */}
       <Container
         fluid
         className="text-center my-5 "

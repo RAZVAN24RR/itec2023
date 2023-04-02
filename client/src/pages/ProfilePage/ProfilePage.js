@@ -2,7 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Image, Button, Nav } from "react-bootstrap";
 import AboutMe from "../../components/AboutMe.js";
-
+import logo from "../../assets/logo.jpg";
+import "./profile.css";
+import Navbar from "react-bootstrap/Navbar";
 const ProfilePage = () => {
   const [applicationStatus, setApplicationStatus] = useState({
     status: "Matched",
@@ -101,6 +103,19 @@ const ProfilePage = () => {
 
   return (
     <>
+      {/* Navbar */}
+      <Navbar className="navi ">
+        <Container className="text-primary">
+          <Navbar.Brand href="/">
+            <img src={logo}></img>
+          </Navbar.Brand>
+          <Nav className="mr-auto justify-content-betwen">
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/signup">Sign up</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      {/* Navbar End */}
       <Container className="bg-white">
         <Row>
           <Col md={{ span: 8, offset: 2 }}>
