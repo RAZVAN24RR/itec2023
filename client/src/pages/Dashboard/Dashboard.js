@@ -156,7 +156,7 @@ function Dashboard({managerName }) {
               <td style={tdStyle}>{employee.startDate}</td>
               <td style={tdStyle}>{employee.timeInCompany}</td>
               <td style={tdStyle}>
-                <a href={`/employees/${employee.id}`} style={buttonStyle}>Edit</a>
+                <a href={`/profile/${employee.id}`} style={buttonStyle}>Edit</a>
             </td>
             </tr>
           ))}

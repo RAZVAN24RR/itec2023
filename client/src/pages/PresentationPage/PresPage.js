@@ -15,15 +15,15 @@ function PresPage() {
     <>
       {/* Navbar */}
       <Navbar className="navi ">
-        <Container className="text-primary">
+        <Container>
           <Navbar.Brand href="/">
             <img src={logo}></img>
           </Navbar.Brand>
           <Nav className="mr-auto justify-content-betwen text-black ">
             <Nav.Link href="/login" className="text-black">
-              Login
+              Log in
             </Nav.Link>
-            <Nav.Link href="/signup" className="text-black">
+            <Nav.Link href="/signup"  className="text-black" >
               Sign up
             </Nav.Link>
           </Nav>
@@ -62,12 +62,17 @@ function PresPage() {
         </p>
         <Form inline className="d-flex justify-content-center text-center">
           <Button
-            variant="secondary"
+            variant="outline-light"
             size="lg"
             className="mr-5 signin"
             href="/signup"
+            style={
+              {color:"black",
+                
+              } 
+            }
           >
-            Sign in
+            Sign up
           </Button>
           <Button
             variant="primary"
