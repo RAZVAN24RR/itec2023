@@ -110,11 +110,11 @@ const ProfilePage = () => {
             <img src={logo}></img>
           </Navbar.Brand>
           <Nav className="mr-auto justify-content-betwen">
-            <Nav.Link href="/login" className="text-black">
-              Login
+            <Nav.Link href="/Home" className="text-black">
+              Back
             </Nav.Link>
-            <Nav.Link href="/signup" className="text-black">
-              Sign up
+            <Nav.Link href="/" className="text-black">
+              Log out
             </Nav.Link>
           </Nav>
         </Container>

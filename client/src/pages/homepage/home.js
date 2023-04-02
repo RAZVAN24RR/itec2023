@@ -15,8 +15,8 @@ const Home = () => {
             <img src={logo}></img>
           </Navbar.Brand>
           <Nav className="mr-auto justify-content-betwen text-black ">
-            <Nav.Link href="/login" className="text-black">
-              Logoutd
+            <Nav.Link href="/" className="text-black">
+              Log out
             </Nav.Link>
             <Nav.Link href="/profile" className="text-black">
               Profile

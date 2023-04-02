@@ -65,9 +65,6 @@ const Login = () => {
             <Nav.Link href="/signup" className="text-black">
               Sign up
             </Nav.Link>
-            <Nav.Link href="/profile" className="text-black">
-              Profile
-            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
