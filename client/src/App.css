@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#tsparticles {
+  position: fixed;
+  inset: 0;
+  background-color: #0d47a1;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 20;
+  opacity: 0.92;
+}
+
