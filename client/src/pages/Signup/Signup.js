@@ -4,17 +4,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import Persdate from "./personaldate";
+import axios from "axios";
 import Signups from "./test";
 import React, { useState } from "react";
 import { InputGroup } from "react-bootstrap";
 import RadioChecks from "./formcheck";
 import Footer from "../../components/Footer/Footer";
 import logo from "../../assets/logo.jpg";
-
+import { useNavigate } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 const Signup = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassWord] = useState("");
   const [yearsOfExperience, setYearsOfExperience] = useState("Select an optio");
 
   function handleOptionSelect(eventKey, event) {
@@ -30,7 +34,7 @@ const Signup = () => {
   const handleradioSelect = (event) => {
     setSpecialization(event.target.value);
   };
-
+  const navigate = useNavigate();
   const [comunicationStyle, setComunicationStyle] = useState("Select aoption");
   const handleDropdown2Select = (eventKey, event) => {
     setComunicationStyle(event.target.innerHTML);
@@ -43,6 +47,27 @@ const Signup = () => {
   const handleDropdown4Select = (eventKey, event) => {
     setRank(event.target.innerHTML);
   };
+
+  const handdleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const responseSubmit = await axios.post(
+        "http://localhost:8000/api/register",
+        {
+          name,
+          email,
+          password,
+        }
+      );
+      alert("User created successfully");
+      console.log(responseSubmit);
+      navigate("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -62,8 +87,72 @@ const Signup = () => {
         </Container>
       </Navbar>
       {/* Navbar End */}
-      <Persdate />
-      <Container className="d-flex justify-content-center align-items-center">
+      {/* Personal Dates */}
+      <Container className="d-flex justify-content-center align-items-center vh-100">
+        <Row className="justify-content-center align-items-center h-100 container-fluid">
+          <Col
+            md={6}
+            className="bg-light p-5 rounded border border-primary p-3 gap-4"
+          >
+            <h1 className="text-center mb-4">Personal Dates</h1>
+
+            <Form
+              className="text-left d-flex gap-4 flex-column"
+              onSubmit={handdleSubmit}
+            >
+              <Form.Group controlId="formBasicText">
+                <Form.Label style={{ fontWeight: "bold" }} placeholder="Name">
+                  Name
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label
+                  style={{ fontWeight: "bold" }}
+                  placeholder="Enter email"
+                >
+                  Email address
+                </Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label
+                  style={{ fontWeight: "bold" }}
+                  placeholder="Password"
+                >
+                  Password
+                </Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setPassWord(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formBasicCheckbox"></Form.Group>
+              <div className="ext-left d-flex gap-4 flex-column mt-3">
+                <Button variant="primary" size="lg" type="submit" block>
+                  Sign up
+                </Button>
+              </div>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+      {/* Personal Dates ENd */}
+      {/* <Container className="d-flex justify-content-center align-items-center">
         <Row className="justify-content-center align-items-center h-100 container-fluid  mb-4">
           <Col
             md={6}
@@ -376,7 +465,7 @@ const Signup = () => {
                     size="lg"
                     type="submit"
                     block
-                    href="/Home"
+                    onChange={handdleSubmit}
                   >
                     Sign up
                   </Button>
@@ -385,7 +474,7 @@ const Signup = () => {
             </Form>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </>
   );
 };
